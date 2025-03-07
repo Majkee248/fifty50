@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* General Styles */
+html, body {
+    @apply font-sans;
+}
+
+/* Headings */
+h1:focus {
+    outline: none;
+}
+
+/* Links */
+a, .btn-link {
+    @apply text-blue-600 hover:text-blue-800;
+}
+
+/* Primary Button */
+.btn-primary {
+    @apply text-white bg-blue-600 border border-blue-700 px-4 py-2 rounded-md shadow-sm
+           hover:bg-blue-700 focus:ring focus:ring-blue-300 transition-all;
+}
+
+/* Focus and Validation Styles */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    @apply ring ring-blue-300;
+}
+
+.valid.modified:not([type=checkbox]) {
+    @apply border-green-500;
+}
+
+.invalid {
+    @apply border-red-500;
+}
+
+.validation-message {
+    @apply text-red-600;
+}
+
+/* Blazor Error UI */
+#blazor-error-ui {
+    @apply bg-yellow-100 text-black fixed bottom-0 left-0 w-full p-4 z-50 shadow-md hidden;
+}
+
+#blazor-error-ui .dismiss {
+    @apply absolute top-2 right-4 cursor-pointer text-xl;
+}
+
+/* Blazor Error Boundary */
+.blazor-error-boundary {
+    @apply bg-red-700 text-white p-4;
+}
+
+.blazor-error-boundary::after {
+    content: "An error has occurred.";
+}
+
+/* Loading Spinner */
+.loading-progress {
+    @apply relative block w-32 h-32 mx-auto mt-20;
+}
+
+.loading-progress circle {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 0.6rem;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+}
+
+
+
+.loading-progress-text {
+    @apply absolute text-center font-bold inset-y-20;
+}
